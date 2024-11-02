@@ -19,8 +19,18 @@ Welcome to the Hello Quantum World - Classroom Kit! This repository contains all
    
    <img src="./images/dashboard.png" alt="IBM Quantum Platform" width="900"/>
 
-5. **Follow the Notebook**: Open `quantum_notebook.ipynb` and follow the steps with your class, using the lesson plan for context and extra guidance.
-6. **Add the API Token to the Code**: When you reach the second code cell, have students add your API token to the `tokens` list like this:
+5. **Download the Repository**: In your terminal, copy and paste the command below to download this repository into your workspace, then press Enter:
+
+   ```bash
+   git clone https://github.com/GraderThan/HelloQuatumWorld
+   ```
+
+   For additional guidance, refer to this animation:
+   
+   <img src="./images/git-clone-hello-quantum-world-repo.gif" alt="git clone" width="900"/>
+
+6. **Follow the Notebook**: Open `quantum_notebook.ipynb` and follow the steps with your class, using the lesson plan for context and extra guidance.
+7. **Add the API Token to the Code**: When you reach the second code cell, have students add your API token to the `tokens` list like this:
 
    ```python
    tokens = ["your_token_here"]
@@ -28,8 +38,8 @@ Welcome to the Hello Quantum World - Classroom Kit! This repository contains all
 
    Then, continue with the rest of the cells.
 
-7. **Refer to the Cheat Sheet**: Use `cheat_sheet.md` to clarify any terms or concepts that students find challenging during the lesson.
+8. **Refer to the Cheat Sheet**: Use `cheat_sheet.md` to clarify any terms or concepts that students find challenging during the lesson.
 
-8. **In-Class Activities**: When you reach the second-to-last code cell and are waiting for the results, it’s a good time to work on the in-class activities provided in the lesson plan.
+9. **In-Class Activities**: When you reach the second-to-last code cell and are waiting for the results, it’s a good time to work on the in-class activities provided in the lesson plan.
 
 Enjoy exploring the exciting world of quantum computing with your students!
