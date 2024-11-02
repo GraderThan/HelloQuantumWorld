@@ -16,7 +16,8 @@ Welcome to the Hello Quantum World - Classroom Kit! This repository contains all
 2. **Enroll Your Students**: Follow this [guide](https://docs.graderthan.com/courses/my-class/) to help your students join the class.
 3. **IBM Quantum Account**: As a teacher, you’ll need an IBM Quantum account to access an API token to run code on IBM’s quantum computers. Every account includes 10 free minutes of quantum computer usage per month. Sign up at [IBM Quantum](https://quantum-computing.ibm.com/). Only teachers need an IBM account; you can share your API token with students temporarily.
 4. **Locate the API Token**: Once signed in, find your API token in the top right corner of the IBM Quantum dashboard. Here’s an example image to guide you:
-   ![IBM Quantum Platform](./images/dashboard.png)
+   
+   <img src="./images/dashboard.png" alt="IBM Quantum Platform" width="900"/>
 
 5. **Follow the Notebook**: Open `quantum_notebook.ipynb` and follow the steps with your class, using the lesson plan for context and extra guidance.
 6. **Add the API Token to the Code**: When you reach the second code cell, have students add your API token to the `tokens` list like this:
