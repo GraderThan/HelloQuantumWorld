@@ -1,45 +1,103 @@
 # Hello Quantum World - Classroom Kit
 
-Welcome to the Hello Quantum World - Classroom Kit! This repository contains all the resources you need to briefly introduce your students to the basics of quantum computing and guide them through running code on an IBM quantum computer.
+Welcome to the Hello Quantum World Classroom Kit! This repository contains everything you need to introduce your students to quantum computing and guide them through running code on a real IBM quantum computer.
 
-## Files
+No prior quantum computing experience is required — this kit is designed to make quantum accessible and engaging for high school students.
 
-- [**`quantum_notebook.ipynb`**](./quantum_notebook.ipynb): A ready-to-use Jupyter Notebook that guides students through connecting to an IBM quantum computer and running their first quantum circuit. This notebook is hands-on, allowing students to follow along and test the code themselves.
+## What's Included
 
-- [**`lesson_plan.md`**](./lesson_plan.md): A full lesson plan designed to help educators introduce quantum computing concepts in a classroom setting. It includes objectives, key concepts, activities, and discussion prompts to engage students and make quantum computing approachable.
+| File | Description |
+|------|-------------|
+| [**`quantum_notebook.ipynb`**](./quantum_notebook.ipynb) | A hands-on Jupyter Notebook that walks students through creating and running their first quantum circuit. Students will create quantum entanglement on a real quantum computer! |
+| [**`lesson_plan.md`**](./lesson_plan.md) | A complete lesson plan with learning objectives, discussion prompts, and activities to help you teach quantum computing concepts. |
+| [**`cheat_sheet.md`**](./cheat_sheet.md) | A quick-reference guide defining key quantum computing terms. Great for students to keep open during the lesson. |
 
-- [**`cheat_sheet.md`**](./cheat_sheet.md): A quick-reference guide with definitions of key terms used in the lesson. This cheat sheet helps students understand and remember essential quantum computing vocabulary.
+## Before Class: Setup Instructions
 
-## Getting Started with the Notebook 
+### 1. Set Up Your Grader Than Workspace
 
-1. **Set up a Class**: [Create a class on Grader Than](https://docs.graderthan.com/courses/create/).
-2. **Enroll Your Students**: Follow this [guide](https://docs.graderthan.com/courses/my-class/) to help your students join the class.
-3. **IBM Quantum Account**: As a teacher, you’ll need an IBM Quantum account to access an API token to run code on IBM’s quantum computers. Every account includes 10 free minutes of quantum computer usage per month. Sign up at [IBM Quantum](https://quantum-computing.ibm.com/). Only teachers need an IBM account; you can share your API token with students temporarily.
-4. **Locate the API Token**: Once signed in, find your API token in the top right corner of the IBM Quantum dashboard. Here’s an example image to guide you:
-   
+1. **Create a Class**: [Follow this guide](https://docs.graderthan.com/courses/create/) to create a class on Grader Than.
+2. **Enroll Your Students**: Use [this guide](https://docs.graderthan.com/courses/my-class/) to help students join your class.
+
+### 2. Get Your IBM Quantum API Token
+
+You'll need an IBM Quantum account to run code on real quantum computers. Every free account includes **10 minutes of quantum computer time per month** — plenty for a classroom demo!
+
+1. **Sign up** at [IBM Quantum](https://quantum.ibm.com/) (it's free)
+2. **Find your API token**: After signing in, click on your profile icon in the top right corner and go to "Account settings" to copy your API token.
+
    <img src="./images/dashboard.png" alt="IBM Quantum Platform" width="900"/>
 
-5. **Download the Repository**: In your terminal, copy and paste the command below to download this repository into your workspace, then press Enter:
+> **Note**: Only you (the teacher) need an IBM account. You'll share your API token with students during the lesson so they can run the code.
 
-   ```bash
-   git clone https://github.com/GraderThan/HelloQuatumWorld
-   ```
+### 3. Download This Repository
 
-   For additional guidance, refer to this animation:
-   
-   <img src="./images/git-clone-hello-quantum-world-repo.gif" alt="git clone" width="900"/>
+In your Grader Than Workspace terminal, run this command:
 
-6. **Follow the Notebook**: Open `quantum_notebook.ipynb` and follow the steps with your class, using the lesson plan for context and extra guidance.
-7. **Add the API Token to the Code**: When you reach the second code cell, have students add your API token to the `tokens` list like this:
+```bash
+git clone https://github.com/GraderThan/HelloQuantumWorld.git
+```
 
-   ```python
-   tokens = ["your_token_here"]
-   ```
+<img src="./images/git-clone-hello-quantum-world-repo.gif" alt="git clone" width="900"/>
 
-   Then, continue with the rest of the cells.
+## During Class: Running the Lesson
 
-8. **Refer to the Cheat Sheet**: Use `cheat_sheet.md` to clarify any terms or concepts that students find challenging during the lesson.
+### Step 1: Open the Notebook
 
-9. **In-Class Activities**: When you reach the second-to-last code cell and are waiting for the results, it’s a good time to work on the in-class activities provided in the lesson plan.
+Open `quantum_notebook.ipynb` in your Grader Than Workspace. Use the lesson plan (`lesson_plan.md`) to guide your explanations.
 
-Enjoy exploring the exciting world of quantum computing with your students!
+### Step 2: Add Your API Token
+
+When you reach the "Connect to IBM Quantum Cloud" section, students will need your API token. There are two options:
+
+**Option A** - Set as environment variable (recommended for sharing):
+```python
+# The notebook reads from this environment variable
+# Set it in your terminal before starting: export IBM_Q_CLOUD_API_KEY="your_token_here"
+```
+
+**Option B** - Paste directly in the code:
+```python
+token = "your_token_here"  # Replace the os.environ.get() line with this
+```
+
+### Step 3: Run Through the Notebook
+
+Work through each cell with your students. The notebook is designed to be self-explanatory, but the lesson plan provides additional context and talking points.
+
+### Step 4: While Waiting for Results
+
+When you submit the job to the quantum computer (the "Run the circuit" cell), there may be a wait time of a few seconds to several minutes depending on queue length. This is a great time to:
+
+- Discuss what's happening behind the scenes
+- Work through the in-class activities in the lesson plan
+- Answer student questions
+- Review the cheat sheet together
+
+### Step 5: Celebrate!
+
+When the results come back, your students will have created and verified **quantum entanglement** on a real quantum computer — something Einstein famously called "spooky action at a distance"!
+
+## Tips for Success
+
+- **Test it yourself first**: Run through the entire notebook before class to make sure everything works and to get a feel for the wait times.
+- **Have the cheat sheet ready**: Keep `cheat_sheet.md` open or printed out for quick reference during questions.
+- **Embrace the wait**: The queue time is actually a great teaching moment about how rare and valuable quantum computers are!
+- **It's okay not to know everything**: Quantum computing is cutting-edge science. It's fine to say "I don't know, let's find out together."
+
+## Troubleshooting
+
+| Problem | Solution |
+|---------|----------|
+| "Token not found" error | Make sure you've added your API token correctly (no extra spaces or quotes) |
+| Long wait times | IBM quantum computers are shared globally. Try running during off-peak hours (early morning US time) |
+| Job fails | Quantum computers occasionally have issues. Simply re-run the cell to submit a new job |
+| Package installation errors | Make sure you run the first code cell (`pip install...`) before running other cells |
+
+## Questions or Feedback?
+
+We'd love to hear how your quantum computing lesson went! Reach out to us at [Grader Than](https://graderthan.com).
+
+---
+
+Enjoy exploring the exciting world of quantum computing with your students! 🚀

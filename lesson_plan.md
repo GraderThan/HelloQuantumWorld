@@ -1,497 +1,346 @@
-# Lesson Plan: Quantum Computing Unveiled – From Bits to Qubits
+# Lesson Plan: Introduction to Quantum Computing
 
 ---
 
-## Grade Level: Middle School and High School (Grades 6-12)
+## Overview
 
-## Duration: 90 minutes
+| | |
+|---|---|
+| **Grade Level** | Middle School and High School (Grades 6-12) |
+| **Duration** | 90 minutes |
+| **Prerequisites** | Basic understanding of computers and binary (0s and 1s) |
 
 ---
 
-## Objectives
+## Learning Objectives
 
 By the end of this lesson, students will be able to:
 
-1. **Differentiate** between classical bits and quantum bits (qubits).
-2. **Explain** the concepts of superposition and entanglement using real-world analogies.
-3. **Demonstrate** understanding through hands-on activities and interactive games that model quantum phenomena.
-4. **Discuss** the significance of quantum computing as a fundamental shift in technology.
+1. **Explain** the difference between classical bits and quantum bits (qubits)
+2. **Describe** superposition using the "spinning coin" analogy
+3. **Describe** entanglement using the "magic gloves" analogy
+4. **Experience** running code on a real quantum computer
+5. **Discuss** why quantum computing matters for the future
 
 ---
 
 ## Materials Needed
 
 ### For the Teacher
-
-- Grader Than Workspace
-- Computer with internet access
-- Projector and screen
+- Computer with internet access and projector
+- Grader Than Workspace with the Hello Quantum World notebook
+- IBM Quantum account with API token ([sign up free](https://quantum.ibm.com/))
+- A large coin for demonstration
 - Whiteboard and markers
-- Large coin (for demonstration)
 
-### For the Students
-
-- Grader Than Workspace
-- Computers or tablets with internet access (one per student or per group)
-- Coins (one per student)
-- Paper clips (two per student)
-- Worksheets with guided questions and space for notes
-- Pencils or pens
+### For Students
+- Grader Than Workspace (one per student or group)
+- Coins (one per student) for the superposition activity
+- Two paper clips per student for the entanglement activity
+- Cheat sheet printout (optional but helpful)
 
 ---
 
 ## Lesson Outline
 
-### **1. Introduction (10 minutes)**
+### 1. Introduction (10 minutes)
 
-#### **Engage the Students**
+#### Hook: The Spinning Coin
 
-- **Thought Experiment:**
-  - Ask students: **"Imagine flipping a coin. What are the possible outcomes?"**
-    - **Expected Answer:** Heads or Tails.
-  - Extend the question: **"What if the coin could be both heads and tails at the same time?"**
+Start with a simple question:
 
-- **Set the Stage:**
-  - Explain that today's lesson will explore how quantum computing makes the seemingly impossible possible, revolutionizing the way we process information.
+> **"If I flip this coin, what are the possible outcomes?"**
 
-#### **Teacher's Notes**
+Students will answer: Heads or Tails.
 
-- **Key Concepts to Emphasize:**
-  - Classical bits vs. quantum bits.
-  - Introducing the idea of multiple states simultaneously.
+Now spin the coin on a table and ask:
 
----
+> **"While the coin is spinning, is it heads or tails?"**
 
-### **2. Background Knowledge Activation (5 minutes)**
+Let students discuss. The answer: It's *both* — until it stops and we look at it.
 
-#### **Review Classical Computing**
+#### Set the Stage
 
-- **Bits:**
-  - Remind students that classical computers use **bits** as the smallest unit of data, which can be either a **0** or a **1**.
+Explain that today they'll learn about quantum computers, which work in a way that's similar to that spinning coin. And the best part? They'll actually run code on a real quantum computer!
 
-- **Binary System:**
-  - Briefly explain how bits form the basis of all computing tasks, from simple calculations to complex graphics.
-
-#### **Teacher's Notes**
-
-- **Explanation:**
-  - Bits are like switches: **on (1)** or **off (0)**.
-
-- **Analogies:**
-  - Light switches, true/false statements.
+#### Teacher Tips
+- Keep the energy high — this is exciting stuff!
+- Emphasize that quantum computers aren't just "faster computers" — they work in a fundamentally different way
+- It's okay to say "scientists are still figuring this out" — quantum physics is genuinely strange
 
 ---
 
-### **3. Direct Instruction: Quantum Basics (15 minutes)**
+### 2. Classical Computing Review (5 minutes)
 
-#### **Introduce Quantum Computing**
+#### Quick Review: Bits
 
-- **Qubits:**
-  - Explain that quantum computers use **qubits**, which, unlike bits, can exist in multiple states simultaneously.
+Ask students what they know about how computers store information.
 
-#### **Concept of Superposition**
+Key points to cover:
+- Computers use **bits** — the smallest unit of information
+- A bit can only be **0** or **1** (like a light switch: off or on)
+- Everything a computer does — games, videos, apps — comes down to billions of 0s and 1s
 
-- **Explanation:**
-  - In classical terms, a bit is like a coin lying flat on a table showing either heads (**1**) or tails (**0**).
-  - A **qubit** is like a spinning coin; while it's spinning, it's not just heads or tails—it's in a state of **both** until it stops and we observe the outcome.
-
-- **Demonstration:**
-  - Spin a large coin in front of the class to illustrate **superposition**.
-
-#### **Concept of Entanglement**
-
-- **Explanation:**
-  - **Entanglement** is a phenomenon where two qubits become linked, and the state of one instantly influences the state of the other, regardless of distance.
-
-- **Analogy:**
-  - Use the analogy of a **pair of gloves**: if you find one left-hand glove in a box, you instantly know the other glove is right-hand, even if it's far away.
-
-#### **Importance of Measurement**
-
-- **Observation Effect:**
-  - In quantum mechanics, the act of **measuring** a qubit forces it into one of the definite states (**0** or **1**).
-  - Until measurement, it's in a **superposition** of all possible states.
-
-#### **Teacher's Cheat Sheet**
-
-- **Classical Bits vs. Qubits:**
-
-  - **Classical Bits:**
-    - Can be **0** or **1**.
-    - Like a coin showing heads or tails.
-
-  - **Qubits:**
-    - Can be **0**, **1**, or **both 0 and 1 simultaneously**.
-    - Like a spinning coin, representing superposition.
-
-- **Superposition:**
-
-  - **Definition:**
-    - A qubit's ability to be in multiple states at once.
-
-  - **Analogy:**
-    - Spinning coin.
-
-  - **Explanation:**
-    - Allows quantum computers to process vast amounts of possibilities simultaneously.
-
-- **Entanglement:**
-
-  - **Definition:**
-    - Two qubits become linked; the state of one instantly affects the other.
-
-  - **Analogy:**
-    - Pair of gloves; knowing one tells you about the other.
-
-  - **Explanation:**
-    - Enables powerful quantum computations and instantaneous state changes.
-
-- **Measurement and Observation Effect:**
-
-  - Measuring a qubit forces it into a definite state.
-  - Until measurement, it's in superposition.
+#### Analogy
+> A bit is like a coin lying flat on a table. It's either heads (1) or tails (0). Never both.
 
 ---
 
-### **4. Guided Practice: Superposition Activity (10 minutes)**
+### 3. Quantum Basics — Direct Instruction (15 minutes)
 
-#### **Activity Setup**
+#### Introducing Qubits
 
-- Distribute coins to each student.
+Explain that quantum computers use **qubits** instead of bits.
 
-#### **Instructions**
+> **"A qubit is like that spinning coin. While it's spinning, it's both 0 AND 1 at the same time. This is called superposition."**
 
-- **Step 1:**
-  - Have students **flip** their coins and record the outcome.
-  - Discuss how this represents a **classical bit** (either **0** or **1**).
+#### Superposition
 
-- **Step 2:**
-  - Ask students to **spin** their coins and observe.
-  - While the coin spins, ask:
-    - **"Is the coin showing heads or tails?"**
-      - **Answer:** It's continuously changing; it's **both** until it stops.
+**Definition:** A qubit can be 0, 1, or *both at the same time* until we measure it.
 
-#### **Discussion**
+**Demonstration:** Spin your coin again. While spinning, it represents superposition. When it lands, it "collapses" to one value — just like measuring a qubit.
 
-- **Relate to Superposition:**
-  - Explain that the spinning coin represents a **qubit in superposition**, embodying both states simultaneously.
+**Why it matters:** This allows quantum computers to explore many possibilities simultaneously, making them powerful for certain types of problems.
 
-- **Key Question:**
-  - **"How does this activity help us understand the difference between bits and qubits?"**
+#### Entanglement
 
-#### **Teacher's Cheat Sheet**
+**Definition:** When two qubits become "linked" so that measuring one instantly tells you about the other — no matter how far apart they are.
 
-- **Expected Outcomes:**
-  - Students realize that while spinning, the coin isn't just heads or tails.
+**Analogy — The Magic Gloves:**
+> Imagine you have a pair of gloves in two boxes. You send one box to your friend on the other side of the world. When you open your box and see a left-hand glove, you *instantly* know your friend has the right-hand glove — even before they open their box.
+>
+> With quantum entanglement, it's even stranger: the gloves don't "decide" which is left and which is right until someone opens a box!
 
-- **Discussion Points:**
-  - Superposition allows qubits to be in multiple states, unlike classical bits.
+Einstein called this "spooky action at a distance" because it seemed so weird.
 
-- **Anticipated Questions:**
+#### Measurement
 
-  - **Student:** "How can something be in two states at once?"
-  - **Answer:** In the quantum world, particles can exist in multiple states until observed.
+**Key concept:** When we measure a qubit, we force it to "choose" — it stops being both 0 and 1 and becomes just one.
 
----
+This is why quantum computing is tricky: we have to be clever about when and how we measure.
 
-### **5. Interactive Game: Quantum Tic-Tac-Toe (30 minutes)**
+#### Teacher's Quick Reference
 
-#### **Activity Introduction**
-
-- Introduce the **Quantum Tic-Tac-Toe** game available at [Quantum Tic-Tac-Toe](https://quantum-ttt.herokuapp.com/offline).
-- Explain that this game simulates quantum behavior, incorporating **superposition** and **entanglement** into a familiar game.
-
-#### **Instructions**
-
-- **Step 1:**
-  - Divide students into pairs or small groups.
-
-- **Step 2:**
-  - Each group accesses the game on their device.
-
-- **Step 3:**
-  - Provide a brief tutorial on how to play Quantum Tic-Tac-Toe:
-
-    - **Quantum Moves:**
-      - Players can place quantum moves, representing superpositions of possible moves.
-
-    - **Collapse:**
-      - When certain conditions are met, superpositions collapse to classical moves, similar to measuring a qubit.
-
-    - **Entanglement:**
-      - Moves can become entangled, affecting other moves on the board.
-
-- **Step 4:**
-  - Allow students to play several rounds, thinking about how the quantum rules differ from classical Tic-Tac-Toe.
-
-#### **Discussion**
-
-- **After Gameplay:**
-  - Bring the class together to discuss their experiences.
-
-- **Guiding Questions:**
-
-  - **"How did the ability to make quantum moves change your strategy?"**
-  - **"What challenges did you face when moves became entangled?"**
-  - **"How does this game illustrate the concepts of superposition and entanglement?"**
-
-#### **Teacher's Cheat Sheet**
-
-- **Key Observations:**
-  - Students may find it challenging to predict outcomes due to superposition and entanglement.
-
-- **Discussion Points:**
-  - The game demonstrates how quantum rules allow for more complex possibilities.
-
-- **Anticipated Questions:**
-
-  - **Student:** "Why did my move affect another square?"
-  - **Answer:** Because of entanglement, moves are linked, similar to entangled qubits.
+| Concept | Classical | Quantum |
+|---------|-----------|---------|
+| Basic unit | Bit | Qubit |
+| Possible states | 0 OR 1 | 0 AND 1 (until measured) |
+| Analogy | Coin lying flat | Coin spinning |
 
 ---
 
-### **6. Collaborative Learning: Entanglement Activity (10 minutes)**
+### 4. Hands-On Activity: Superposition with Coins (10 minutes)
 
-#### **Activity Setup**
+#### Setup
+Give each student a coin.
 
-- Provide each student with **two paper clips**.
+#### Activity
 
-#### **Instructions**
+**Part 1 — Classical Bit:**
+- Have students flip their coin and let it land
+- Record: Heads = 1, Tails = 0
+- Discuss: This is how a classical bit works — it's one or the other
 
-- **Creating Linked "Particles":**
-  - Each student links their two paper clips to form a chain.
+**Part 2 — Qubit in Superposition:**
+- Have students spin their coin on the desk
+- While spinning, ask: "Is it heads or tails?"
+- Answer: It's both! This represents superposition
 
-- **Pair Interaction:**
-  - Students pair up and connect their chains, creating a loop of four paper clips.
-
-- **Demonstrating Entanglement:**
-  - Without communicating, each student gently twists or moves one of their own paper clips.
-
-- **Observation:**
-  - Notice how movement in one part affects the entire structure, symbolizing entangled particles.
-
-#### **Discussion**
-
-- **Relate to Entanglement:**
-  - Just as the paper clip loop changes when one part is moved, entangled particles influence each other's states instantaneously.
-
-- **Key Questions:**
-
-  - **"What happened when you adjusted your paper clip?"**
-  - **"How does this illustrate the concept of entanglement?"**
-
-#### **Teacher's Cheat Sheet**
-
-- **Expected Outcomes:**
-  - Students observe the interconnectedness of the paper clips.
-
-- **Discussion Points:**
-  - Entanglement links particles so that the state of one affects the other.
-
-- **Anticipated Questions:**
-
-  - **Student:** "Does entanglement mean we can send messages instantly?"
-  - **Answer:** While entangled particles affect each other instantly, we can't use this to send information faster than light.
+#### Discussion Questions
+- "What happens when the coin stops spinning?" (It collapses to one state)
+- "How is this like measuring a qubit?" (Measurement forces it to choose)
 
 ---
 
-### **7. Independent Practice: Applying Concepts (10 minutes)**
+### 5. Interactive Game: Quantum Tic-Tac-Toe (20 minutes)
 
-#### **Worksheet Completion**
+#### Introduction
 
-- Provide a worksheet with scenarios and questions.
+Introduce the Quantum Tic-Tac-Toe game, which lets students experience superposition and entanglement in a familiar game.
 
-#### **Sample Questions and Answers**
+**Game Link:** [https://quantumtictactoe.com/play](https://quantumtictactoe.com/play)
 
-1. **Multiple Choice:**
+Alternative link: [https://everthemore.itch.io/tiqtaqtoe](https://everthemore.itch.io/tiqtaqtoe)
 
-   - **Question:** In quantum computing, what does superposition allow a qubit to do?
+#### Setup
+- Divide students into pairs
+- Each pair accesses the game on a computer or tablet
+- Start with "Minimal Quantum" setting, then increase quantumness
 
-     - A) Exist as a 0
-     - B) Exist as a 1
-     - C) **Exist as both 0 and 1 simultaneously** *(Correct Answer)*
-     - D) Switch between 0 and 1 randomly
+#### How It Works
+- **Superposition moves:** Place your X or O in *two* squares at once — it's in both until something forces it to collapse
+- **Entanglement:** Moves can become linked to other moves
+- **Measurement:** When the board gets complicated, moves collapse to definite positions
 
-2. **Short Answer:**
+#### Gameplay (15 minutes)
+Let students play several rounds, experimenting with different quantumness levels.
 
-   - **Question:** Explain in your own words how entanglement differs from classical correlations.
-
-   - **Sample Answer:**
-     - In classical correlations, knowing the state of one object gives information about another due to prior knowledge. In entanglement, two qubits are connected so that the state of one instantly determines the state of the other, regardless of distance, which is stronger than classical correlations.
-
-3. **Reflection Question:**
-
-   - **Question:** How did playing Quantum Tic-Tac-Toe help you understand quantum concepts?
-
-   - **Sample Answer:**
-     - The game showed how moves can be in multiple places at once (superposition) and how choosing one move can affect others on the board (entanglement), helping me understand these quantum principles in a fun way.
-
-#### **Teacher's Cheat Sheet**
-
-- **Assessment Guidance:**
-  - Review students' answers for understanding of key concepts.
-
-- **Common Mistakes:**
-  - Confusing superposition with random switching.
-  - Thinking entanglement allows faster-than-light communication.
+#### Discussion (5 minutes)
+Bring the class together and ask:
+- "How was this different from regular Tic-Tac-Toe?"
+- "What strategies did you discover?"
+- "How did entanglement affect your game?"
 
 ---
 
-### **8. Connecting to the Real World (5 minutes)**
+### 6. Hands-On Activity: Entanglement with Paper Clips (10 minutes)
 
-#### **Discuss Applications**
+#### Setup
+Give each student two paper clips.
 
-- **Cryptography:**
-  - Quantum computers can factor large numbers efficiently, impacting encryption methods.
+#### Activity
 
-- **Medicine:**
-  - Simulating molecular structures for drug discovery.
+1. **Link your paper clips** into a chain of two
+2. **Pair up** with a partner and connect your chains into a loop of four clips
+3. **Without talking**, each person gently twists or moves one of their clips
+4. **Observe** how movement in one part affects the whole structure
 
-- **Optimization Problems:**
-  - Enhancing logistics, such as route optimization for deliveries.
+#### Discussion
+> "Just like our paper clip loop, entangled qubits are connected. When something happens to one, it affects the other — instantly, no matter how far apart they are."
 
-#### **Emphasize Significance**
+**Common question:** "Can we use entanglement to send messages instantly?"
 
-- Quantum computing isn't just a faster computer; it's a new way of processing information that can solve complex problems currently out of reach.
-
-#### **Teacher's Notes**
-
-- **Discussion Points:**
-  - Highlight how quantum computing can revolutionize various industries.
-
-- **Anticipated Questions:**
-
-  - **Student:** "Will quantum computers replace our current computers?"
-  - **Answer:** Yes, quantum computers have the potential to replace our current computers by handling tasks much more efficiently. They represent a fundamental shift in technology and may become the standard for many computing needs in the future.
+**Answer:** Great question! Unfortunately, no. While the particles affect each other instantly, we can't control *what* message is sent. It's random — so no faster-than-light texting! Scientists are still working out exactly why this is.
 
 ---
 
-### **9. Assessment and Reflection (5 minutes)**
+### 7. Run Code on a Real Quantum Computer (15 minutes)
 
-#### **Quick Quiz**
+This is the highlight of the lesson!
 
-- Orally ask a few questions to gauge understanding:
+#### Setup
+- Open the `quantum_notebook.ipynb` in Grader Than Workspace
+- Make sure your IBM Quantum API token is ready
 
-  1. **"What is a qubit?"**
-     - **Expected Answer:** The basic unit of quantum information, which can be 0, 1, or both simultaneously.
+#### Walk Through the Notebook
+Guide students through each cell:
 
-  2. **"How does superposition differ from a classical bit?"**
-     - **Expected Answer:** Superposition allows a qubit to be in multiple states at once, unlike a classical bit, which is either 0 or 1.
+1. **Install tools** — Set up the software
+2. **Connect to IBM Quantum** — Link to real quantum computers
+3. **Create the circuit** — Build our quantum program (H gate + CX gate = entanglement!)
+4. **Set up measurements** — Define what we want to observe
+5. **Optimize** — Adapt our circuit for the specific quantum computer
+6. **Run it!** — Send to the quantum computer and wait
+7. **See results** — Verify that we created entanglement
 
-  3. **"Why is entanglement important in quantum computing?"**
-     - **Expected Answer:** It links qubits so that the state of one instantly affects the state of another, enabling powerful computations.
+#### While Waiting
+The quantum computer queue may take a few minutes. Use this time to:
+- Review the cheat sheet
+- Discuss what's happening (your code is running on a real quantum computer!)
+- Answer questions
+- Complete the worksheet (if using one)
 
-#### **Reflection**
-
-- Encourage students to share one new thing they learned and one question they still have.
-
-#### **Teacher's Cheat Sheet**
-
-- **Assessment Guidance:**
-  - Ensure students grasp the fundamental concepts.
-
-- **Addressing Remaining Questions:**
-  - Encourage curiosity and provide resources for further exploration.
+#### Celebrate the Results
+When results come back, point out:
+- **ZZ and XX values close to 1** = We created entanglement!
+- Your students just ran code on one of the most advanced machines ever built
 
 ---
 
-### **10. Conclusion (5 minutes)**
+### 8. Real-World Applications (5 minutes)
 
-#### **Summarize Key Takeaways**
+Briefly discuss how quantum computers might change the world:
 
-- Reiterate the differences between **classical bits** and **qubits**.
-- Highlight the revolutionary potential of **quantum computing**.
+| Field | Quantum Application |
+|-------|---------------------|
+| **Medicine** | Simulating molecules to discover new drugs |
+| **Security** | Breaking (and creating) new types of encryption |
+| **Finance** | Optimizing investment strategies |
+| **Climate** | Modeling complex climate systems |
+| **AI** | Training machine learning models faster |
 
-#### **Encourage Exploration**
+**Key message:** Quantum computers won't replace your laptop for everyday tasks, but they'll solve problems that regular computers *never* could — even with billions of years to work on them.
 
-- Invite students to think about how quantum computing could impact their future and consider pursuing further study in this field.
+---
 
-#### **Teacher's Notes**
+### 9. Wrap-Up and Reflection (5 minutes)
 
-- **Final Thoughts:**
-  - Emphasize that understanding quantum computing is essential as it becomes more prevalent.
+#### Quick Quiz (Oral)
+1. "What's the difference between a bit and a qubit?"
+2. "What is superposition?"
+3. "What is entanglement?"
+4. "What did we prove by running our quantum circuit?"
 
-- **Inspiration:**
-  - Share stories of breakthroughs or current research in quantum computing.
+#### Reflection
+Ask students to share:
+- One thing they found surprising
+- One question they still have
+
+#### Closing
+> "Today you ran code on a real quantum computer — something that wasn't possible for *anyone* just 10 years ago. Quantum computing is still in its early days, which means the biggest discoveries haven't been made yet. Maybe one of you will make them!"
 
 ---
 
 ## Differentiation Strategies
 
-- **For Visual Learners:**
-  - Use diagrams and visual aids to illustrate concepts like superposition and entanglement.
-
-- **For Kinesthetic Learners:**
-  - Hands-on activities (coin spinning, paper clip linking, interactive game) reinforce learning.
-
-- **For Advanced Students:**
-  - Provide challenging extension questions.
-  - Encourage research into quantum algorithms like Shor's or Grover's algorithm.
-
-- **For Students Needing Extra Support:**
-  - Pair with supportive peers.
-  - Provide simplified explanations and one-on-one assistance.
+| Student Type | Approach |
+|--------------|----------|
+| **Visual learners** | Use diagrams, the circuit visualization, and the Bloch sphere (if going deeper) |
+| **Kinesthetic learners** | Emphasize the coin spinning, paper clip, and game activities |
+| **Advanced students** | Discuss quantum gates in more detail, explore IBM Quantum Composer |
+| **Students needing support** | Pair with peers, focus on analogies over math, use the cheat sheet |
 
 ---
 
-## Assessment Methods
+## Assessment Ideas
 
-- **Formative Assessments:**
-  - Observations during activities and discussions.
-  - Responses on the worksheet.
+### Formative (During Lesson)
+- Observe participation in activities
+- Listen to discussions and questions
+- Check understanding during the notebook walkthrough
 
-- **Summative Assessment:**
-  - Collect and review worksheets for understanding.
-  - Use the quick quiz to identify areas needing reinforcement.
-
----
-
-## Extensions/Enrichment
-
-- **Project Idea:**
-  - Assign a project where students create a poster or presentation on a specific application of quantum computing.
-
-- **Research Assignment:**
-  - Encourage students to investigate current developments in quantum computing technology.
+### Summative (After Lesson)
+- Short worksheet with multiple choice and short answer
+- Exit ticket: "Explain superposition to someone who's never heard of it"
+- Optional project: Research one application of quantum computing
 
 ---
 
-## Resources for Teachers
+## Common Student Questions (and Answers)
 
-- **Online Resources:**
-  - [Quantum Tic-Tac-Toe Game](https://quantum-ttt.herokuapp.com/offline) – for classroom use.
+**Q: Will quantum computers replace regular computers?**
+> A: Not for everyday tasks. Quantum computers are specialized tools for specific types of problems. You'll still use a regular computer for homework, games, and browsing the internet.
 
-- **Background Reading:**
-  - *"Quantum Computing: A Gentle Introduction"* by Eleanor Rieffel and Wolfgang Polak.
+**Q: How can something be 0 and 1 at the same time?**
+> A: It's genuinely strange! In the quantum world, particles behave differently than objects we can see. Scientists describe it mathematically, but even they find it weird. The important thing is that it *works* — and we can use it.
 
----
+**Q: Can I get a quantum computer at home?**
+> A: Not yet — they need to be kept extremely cold (colder than outer space!) and are very expensive. But you can access them through the cloud, just like we did today!
 
-## Notes for Teachers
-
-- **Preparation:**
-  - Familiarize yourself with basic quantum concepts and the Quantum Tic-Tac-Toe game.
-  - Test the game on your school's network beforehand to ensure accessibility.
-
-- **Classroom Management:**
-  - Ensure devices are available and functioning.
-  - Monitor group activities to keep students on task.
-
-- **Addressing Misconceptions:**
-  - Clarify that while analogies and games help, quantum mechanics behaves differently from classical physics.
-
-- **Inclusivity:**
-  - Encourage all students to participate and value each contribution.
+**Q: Is quantum computing related to quantum physics?**
+> A: Yes! Quantum computing uses the strange rules of quantum physics — the physics of very tiny things like atoms and electrons — to process information in new ways.
 
 ---
 
-## Lesson Summary
+## Resources
 
-This lesson introduces students to the fascinating world of quantum computing by contrasting it with classical computing. Through engaging explanations, hands-on activities, and the interactive **Quantum Tic-Tac-Toe** game, students explore the concepts of **superposition** and **entanglement**. The game provides a practical and enjoyable way to experience quantum principles in action, deepening their understanding of how quantum computers operate differently from classical ones. The lesson emphasizes the significance of quantum computing as a transformative technology with the potential to solve complex problems, highlighting its importance in the future landscape of technology and society.
+### For Students
+- [IBM Quantum Learning](https://learning.quantum.ibm.com/) — Free courses and tutorials
+- [Quantum TiqTaqToe](https://quantumtictactoe.com/play) — The game we played in class
+
+### For Teachers
+- [Q-12 Education](https://q12education.org/) — Resources for teaching quantum in K-12
+- *"Quantum Computing: A Gentle Introduction"* by Eleanor Rieffel and Wolfgang Polak
+- [Qubit by Qubit](https://www.qubitbyqubit.org/) — Free quantum computing courses for students
 
 ---
 
-## Final Encouragement
+## Final Notes for Teachers
 
-Remember, the goal is to spark curiosity and provide a foundational understanding of quantum computing. It's okay if not every student grasps every concept fully. The important thing is to engage them in thinking about the possibilities and implications of this exciting field.
+**Preparation:**
+- Run through the entire notebook yourself before class
+- Test the Quantum Tic-Tac-Toe game on your school's network
+- Have your IBM Quantum API token ready
 
-**Enjoy exploring the quantum realm with your students!**
+**Mindset:**
+- It's okay not to know everything — quantum physics is genuinely confusing, even for experts
+- Focus on the *concepts* and *excitement*, not the math
+- Celebrate that students are doing something cutting-edge!
+
+**Timing:**
+- The 90-minute timing is flexible — feel free to skip or shorten activities if needed
+- The quantum computer wait time is unpredictable; have backup discussion topics ready
+
+---
+
+**Enjoy exploring the quantum realm with your students!** 🚀
